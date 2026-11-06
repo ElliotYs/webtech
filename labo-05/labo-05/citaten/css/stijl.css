@@ -1,0 +1,95 @@
+/* stijl.css - labo 5, citaten (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+
+--blauw--: #1e5bd8;
+--roze--: #e88bb4;
+--rood--: #c51f2a;
+--oranje--:#d98c1a;
+--groen--:#3b7a2a;
+--salie--:#8fb89a;
+--paars--:#7b4fa3;
+--grijs--:#6b6b6b;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+line-height: 1.5rem;
+font-weight: bold;
+
+}
+
+/* === your rules === */
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+blockquote {
+    padding: 0 0.5rem;
+    margin: 0.5rem 1rem;
+}
+
+cite {
+    font-weight: normal;
+}
+
+.citaat{
+    flex: 1 1 18rem;
+}
+
+.citaat.blauw {
+    border-left: solid var(--blauw--) 0.5rem ;
+    color: var(--blauw--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.citaat.roze {
+    border-left: solid var(--roze--) 0.5rem;
+    color: var(--roze--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.citaat.rood {
+    border-left: solid var(--rood--) 0.5rem;
+    color: var(--rood--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.citaat.oranje {
+    border-left: solid var(--oranje--) 0.5rem;
+    color: var(--oranje--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.citaat.groen {
+    border-left: solid var(--groen--) 0.5rem;
+    color: var(--groen--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.citaat.salie {
+    border-left: solid var(--salie--) 0.5rem;
+    color: var(--salie--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.citaat.paars {
+    border-left: solid var(--paars--) 0.5rem;
+    color: var(--paars--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.citaat.grijs {
+    border-left: solid var(--grijs--) 0.5rem;
+    color: var(--grijs--);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
