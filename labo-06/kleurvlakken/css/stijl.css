@@ -1,0 +1,93 @@
+/* stijl.css - labo 6, kleurvlakken (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+ 
+--rood--:#b90020; 
+--green--:#349803; 
+--geel--:#ffcd00;
+--blauw--:#006aff;
+}
+
+/* === base: narrow screens first === */
+main {
+    display: grid;
+    min-height: 100svh;
+}
+
+.vlak.rood {
+    background-color: var(--rood--);
+}
+
+.vlak.groen {
+    background-color: var(--green--);
+}
+
+.vlak.geel {
+    background-color: var(--geel--);
+}
+
+.vlak.blauw {
+    background-color: var(--blauw--);
+}
+
+/* === media queries: below the base rules === */
+
+@media (min-width: 37.5rem) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .vlak.rood {
+    background-color: var(--rood--);
+    grid-column: 1;
+    }   
+
+    .vlak.groen {
+    background-color: var(--green--);
+    grid-column: 2;
+    }
+
+    .vlak.geel {
+    background-color: var(--geel--);
+    grid-column: 3;
+    }
+
+    .vlak.blauw {
+    background-color: var(--blauw--);
+    grid-column: 4;
+    }
+}
+
+@media (min-width: 50rem) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    .vlak.rood {
+    background-color: var(--rood--);
+    grid-column: 1;
+    grid-row: 1;
+    }   
+
+    .vlak.groen {
+    background-color: var(--green--);
+    grid-column: 2;
+    grid-row: 1;
+    }
+
+    .vlak.geel {
+    background-color: var(--geel--);
+    grid-column: 1;
+    grid-row: 2;
+    }
+
+    .vlak.blauw {
+    background-color: var(--blauw--);
+    grid-column: 2;
+    grid-row: 2;
+    }
+}

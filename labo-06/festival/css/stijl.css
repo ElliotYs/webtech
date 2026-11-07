@@ -1,0 +1,163 @@
+/* stijl.css - labo 6, festival (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+--papier--: #fff8ee; 
+--inkt--: #1a1a1a; 
+--gedempt--: #6b6b6b; 
+--accent--: #d6341c;
+}
+
+/* === base: narrow screens first === */
+
+body {
+    background-color: var(--papier--);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    border: 2px solid var(--accent--);
+    border-radius: 2rem;
+    text-align: center;
+    margin-top: 0.5rem ;
+}
+
+nav ul {
+    padding-left: 0;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+.logo {
+    color: var(--accent--);
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+} 
+
+nav a.actief {
+    color: var(--papier--);
+    background-color: var(--accent--);
+}
+
+nav a {
+    display: block;
+    color: var(--accent--);
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.75rem 1.25rem;
+    border-radius: 2rem;
+}
+
+/* held */
+
+section.held p ,section.held h1 {
+    display: block;
+    background-color: var(--accent--);
+    color: var(--papier--);
+    padding: 0 4vw;
+}
+
+section.held h1{
+    padding-top: 8vw; 
+    padding-bottom: 1rem;
+    line-height: 1.1;
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+}
+
+section.held p {
+    padding-bottom: 8vw; 
+    font-size: clamp(2rem, 8vw, 6rem) clamp(1rem, 5vw, 4rem);
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+}
+
+/* PROGRAMMA */
+
+section#programma {
+    max-width: 44rem;
+    padding: clamp (1.5rem 5vw);
+}
+
+ul.programma {
+    padding-left: 0;
+}
+
+h2 {
+    padding-top: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul.programma li {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e3d9c8;
+    padding: 1rem 0rem;
+}
+
+time {
+    color: var(--accent--);
+    font-weight: bold;
+    width: 4rem;
+
+}
+
+span {
+    margin-left: auto;
+    color: var(--gedempt--);
+}
+
+/* FOOTER */
+
+footer p {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--gedempt--);
+}
+
+/* === media queries: below the base rules === */
+
+@media (min-width: 900px) {
+    nav ul {
+        padding-top: 2rem;
+        display: flex;
+    }
+
+    li {
+        margin: 0rem 0.2rem;
+    }
+
+    .logo {padding-top: 2rem;}
+
+    section#programma {
+        margin: 1rem auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        padding-right: 2rem;
+    }
+    
+    .logo {
+        padding-top: 0rem;
+        padding-left: 2rem;
+    }
+}
